@@ -9,7 +9,7 @@
            <xpath expr="//app[@name='general_settings']" position="inside">
                <block title="Product Threshold Settings">
                    <setting string="Set the product threshold">
-                       <field name="product_threshold"/>
+                       <field name="threshold"/>
                    </setting>
                </block>
            </xpath>
