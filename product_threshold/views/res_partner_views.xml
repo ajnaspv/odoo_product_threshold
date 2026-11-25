@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="res_partner_inherit_view_threshold" model="ir.ui.view">
+            <field name="name">customers.product.threshold.inherit.view</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='category_id']" position="after">
+                    <field name="product_ids" widget="many2many_tags"/>
+                    <button class="btn-primary" type="object" name="action_recalculate_btn" string="Recalculate"/>
+                    <button class="btn-primary" type="object" name="action_add_so_btn" string="Add Sale Order"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
